@@ -1,18 +1,60 @@
-<nav class="navbar">
-    <div class="navbar-container">
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-        <!-- Logo (luego me dices si será texto o imagen) -->
-        <a href="/" class="navbar-logo">Raymond Quintana</a>
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
 
-        <!-- Navigation -->
-        <ul class="navbar-menu">
-            <li><a href="/sobre-mi/">Sobre Mí</a></li>
-            <li><a href="/servicios/">Servicios</a></li>
-            <li><a href="/bass/">Bass</a></li>
+  useEffect(() => {
+    function handleScroll() {
+      const threshold = window.innerHeight * 0.5;
+      setScrolled(window.scrollY > threshold);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav className={`navbar ${scrolled ? "navbar-scrolled" : "navbar-top"}`}>
+      <div className="nav-inner">
+        <Link to="/" className="logo">
+          <img
+            src={scrolled ? "/assets/img/umbra-logo-horizontal-white.png" : "/assets/img/umbra-logo-white.png"}
+            alt="Umbra Logo"
+          />
+        </Link>
+
+        <ul className="nav-links">
+          <li><Link to="/">Home</Link></li>
+
+          <li className="has-submenu">
+            <Link to="/sobre-mi">Sobre mí</Link>
+            <div className="submenu fade">
+              <Link to="/sobre-mi/mi-historia">Mi Historia</Link>
+              <Link to="/sobre-mi/experiencia">Experiencia</Link>
+              <Link to="/sobre-mi/habilidades">Habilidades</Link>
+            </div>
+          </li>
+
+          <li className="has-submenu">
+            <Link to="/servicios">Servicios</Link>
+            <div className="submenu fade">
+              <Link to="/servicios/proyectos">Proyectos</Link>
+              <Link to="/servicios/socios">Socios</Link>
+            </div>
+          </li>
+
+          <li className="has-submenu">
+            <Link to="/bass">Bass</Link>
+            <div className="submenu fade">
+              <Link to="/bass/blog">Blog</Link>
+            </div>
+          </li>
+
+          <li>
+            <Link className="cta" to="/contacto">Contacto</Link>
+          </li>
         </ul>
-
-        <!-- CTA -->
-        <a href="/contacto/" class="navbar-cta">Contacto</a>
-
-    </div>
-</nav>
+      </div>
+    </nav>
+  );
+}
