@@ -1,60 +1,54 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+<nav class="navbar" data-logo-default="/core-folio/assets/img/umbra-logo-white.png"
+     data-logo-scrolled="/core-folio/assets/img/umbra-logo-horizontal-white.png">
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+    <div class="navbar-container">
 
-  useEffect(() => {
-    function handleScroll() {
-      const threshold = window.innerHeight * 0.5;
-      setScrolled(window.scrollY > threshold);
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+        <!-- Logo -->
+        <a href="/core-folio/" class="navbar-logo">
+            <img id="navbar-logo-img" 
+                 src="/core-folio/assets/img/umbra-logo-white.png" 
+                 alt="Umbra Logo">
+        </a>
 
-  return (
-    <nav className={`navbar ${scrolled ? "navbar-scrolled" : "navbar-top"}`}>
-      <div className="nav-inner">
-        <Link to="/" className="logo">
-          <img
-            src={scrolled ? "/assets/img/umbra-logo-horizontal-white.png" : "/assets/img/umbra-logo-white.png"}
-            alt="Umbra Logo"
-          />
-        </Link>
+        <!-- Menu principal -->
+        <ul class="navbar-menu">
 
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
+            <li><a href="/core-folio/">Home</a></li>
 
-          <li className="has-submenu">
-            <Link to="/sobre-mi">Sobre mí</Link>
-            <div className="submenu fade">
-              <Link to="/sobre-mi/mi-historia">Mi Historia</Link>
-              <Link to="/sobre-mi/experiencia">Experiencia</Link>
-              <Link to="/sobre-mi/habilidades">Habilidades</Link>
-            </div>
-          </li>
+            <!-- SOBRE MI -->
+            <li class="navbar-item has-submenu">
+                <a href="/core-folio/sobre-mi/">Sobre mí</a>
 
-          <li className="has-submenu">
-            <Link to="/servicios">Servicios</Link>
-            <div className="submenu fade">
-              <Link to="/servicios/proyectos">Proyectos</Link>
-              <Link to="/servicios/socios">Socios</Link>
-            </div>
-          </li>
+                <ul class="submenu">
+                    <li><a href="/core-folio/sobre-mi/mi-historia/">Mi historia</a></li>
+                    <li><a href="/core-folio/sobre-mi/experiencia/">Experiencia</a></li>
+                    <li><a href="/core-folio/sobre-mi/habilidades/">Habilidades</a></li>
+                </ul>
+            </li>
 
-          <li className="has-submenu">
-            <Link to="/bass">Bass</Link>
-            <div className="submenu fade">
-              <Link to="/bass/blog">Blog</Link>
-            </div>
-          </li>
+            <!-- SERVICIOS -->
+            <li class="navbar-item has-submenu">
+                <a href="/core-folio/servicios/">Servicios</a>
 
-          <li>
-            <Link className="cta" to="/contacto">Contacto</Link>
-          </li>
+                <ul class="submenu">
+                    <li><a href="/core-folio/servicios/proyectos/">Proyectos</a></li>
+                    <li><a href="/core-folio/servicios/socios/">Socios</a></li>
+                </ul>
+            </li>
+
+            <!-- BASS -->
+            <li class="navbar-item has-submenu">
+                <a href="/core-folio/bass/">Bass</a>
+
+                <ul class="submenu">
+                    <li><a href="/core-folio/bass/blog/">Blog</a></li>
+                </ul>
+            </li>
+
         </ul>
-      </div>
-    </nav>
-  );
-}
+
+        <!-- CTA CONTACTO -->
+        <a href="/core-folio/contacto/" class="navbar-cta">Contacto</a>
+
+    </div>
+</nav>
