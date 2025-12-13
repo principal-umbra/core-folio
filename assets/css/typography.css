@@ -21,8 +21,8 @@
 /* LXGW WenKai Mono — Body / Content */
 @font-face {
     font-family: "LXGW WenKai Mono";
-    src: url("../fonts/LXGW WenKai Mono.woff2") format("woff2"),
-         url("../fonts/LXGW WenKai Mono.woff") format("woff");
+    src: url("../fonts/LXGWWenKaiMono.woff2") format("woff2"),
+         url("../fonts/LXGWWenKaiMono.woff") format("woff");
     font-display: swap;
 }
 
