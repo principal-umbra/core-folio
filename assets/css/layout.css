@@ -1,52 +1,60 @@
-/* =========================
-   HERO HOME
-========================= */
+/* ======================================================
+   HERO HOME — LAYOUT PRINCIPAL
+====================================================== */
 
 .hero-home {
     position: relative;
     min-height: 100vh;
-    width: 100%;
+    display: flex;
+    align-items: center;       /* centra vertical */
+    justify-content: center;   /* centra horizontal */
     overflow: hidden;
 }
 
 /* Fondo */
-.hero-home .hero-bg {
+.hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url("/core-folio/assets/img/hero-bg-home.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     z-index: 1;
 }
 
 /* Contenido */
-.hero-home .hero-content {
+.hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1100px;
-    padding: 140px 32px 80px;
+    max-width: 900px;
+    text-align: center;        /* 🔴 CLAVE */
+    padding: 0 24px;
 }
 
-/* Grupo CTA */
+/* ======================================================
+   TEXTO
+====================================================== */
+
+.hero-title {
+    font-family: "Kashima Brush", cursive;
+    font-size: clamp(4.5rem, 8vw, 7rem); /* 🔥 MUCHO MÁS GRANDE */
+    line-height: 1.05;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+.hero-description {
+    font-family: "LXGWWenKaiMono", monospace;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 36px;
+}
+
+/* ======================================================
+   CTAs
+====================================================== */
+
 .hero-cta-group {
-    margin-top: 32px;
     display: flex;
     gap: 16px;
+    justify-content: center;   /* 🔴 CLAVE */
     flex-wrap: wrap;
-}
-
-/* Logo contextual grande */
-.hero-logo-contextual {
-    position: absolute;
-    top: 140px;
-    right: 64px;
-    z-index: 2;
-}
-
-.hero-logo-contextual img {
-    width: 220px;
-    height: auto;
-    opacity: 0.85;
-    pointer-events: auto;
 }
