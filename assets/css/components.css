@@ -152,10 +152,15 @@
     height: auto;
 }
 
-/* Logo horizontal (solo visible con scroll) */
+/* ------------------------------------------------------
+   LOGO HORIZONTAL (VISIBLE SOLO CON SCROLL)
+------------------------------------------------------ */
 .navbar-logo-horizontal {
-    display: none;
+    display: flex;              /* siempre ocupa su lugar */
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
 }
 
 .navbar-logo-horizontal img {
@@ -163,9 +168,10 @@
     width: auto;
 }
 
-/* Estado scroll */
+/* Estado con scroll */
 .navbar.navbar-scrolled .navbar-logo-horizontal {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* -------------------------
@@ -303,6 +309,7 @@
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 
 
 
