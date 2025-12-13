@@ -1,20 +1,60 @@
 /* =========================
-   HERO TYPOGRAPHY
-========================= */
+   FONT FACES
+   ========================= */
 
-.hero-title {
-    font-family: "Kashima Brush", sans-serif;
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    line-height: 1.1;
-    margin: 0;
-    color: #FFFFFF;
+/* Kashima Brush — Hero Name */
+@font-face {
+    font-family: "Kashima Brush";
+    src: url("../fonts/KashimaBrushDemo.woff2") format("woff2"),
+         url("../fonts/KashimaBrushDemo.woff") format("woff");
+    font-display: swap;
 }
 
-.hero-description {
-    margin-top: 16px;
-    max-width: 520px;
-    font-family: "Moyko", sans-serif;
-    font-size: 1.125rem;
+/* Moyko — UI / CTAs / Navbar */
+@font-face {
+    font-family: "Moyko";
+    src: url("../fonts/Moyko.woff2") format("woff2"),
+         url("../fonts/Moyko.woff") format("woff");
+    font-display: swap;
+}
+
+/* LXGW WenKai Mono — Body / Content */
+@font-face {
+    font-family: "LXGW WenKai Mono";
+    src: url("../fonts/LXGW WenKai Mono.woff2") format("woff2"),
+         url("../fonts/LXGW WenKai Mono.woff") format("woff");
+    font-display: swap;
+}
+
+/* =========================
+   TYPOGRAPHY USAGE RULES
+   ========================= */
+
+:root {
+    --font-hero: "Kashima Brush", cursive;
+    --font-ui: "Moyko", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "LXGW WenKai Mono", ui-monospace, monospace;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
     line-height: 1.6;
-    color: #FFFFFF;
+    color: #EDEDED;
+}
+
+/* HERO */
+.hero-title {
+    font-family: var(--font-hero);
+    letter-spacing: 0.02em;
+}
+
+/* UI / NAV / BUTTONS */
+.navbar,
+button,
+.btn,
+input,
+textarea,
+label {
+    font-family: var(--font-ui);
 }
