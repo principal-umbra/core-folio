@@ -1,54 +1,39 @@
-<nav class="navbar" data-logo-default="/core-folio/assets/img/umbra-logo-white.png"
-     data-logo-scrolled="/core-folio/assets/img/umbra-logo-horizontal-white.png">
-
-    <div class="navbar-container">
-
-        <!-- Logo -->
-        <a href="/core-folio/" class="navbar-logo">
-            <img id="navbar-logo-img" 
-                 src="/core-folio/assets/img/umbra-logo-white.png" 
-                 alt="Umbra Logo">
+<header class="navbar" id="main-navbar">
+    <!-- Logo principal inamovible -->
+    <div class="navbar-logo-main">
+        <a href="/core-folio/">
+            <img
+                src="/core-folio/assets/img/umbra-logo-white.png"
+                alt="Umbra Core Logo"
+            >
         </a>
-
-        <!-- Menu principal -->
-        <ul class="navbar-menu">
-
-            <li><a href="/core-folio/">Home</a></li>
-
-            <!-- SOBRE MI -->
-            <li class="navbar-item has-submenu">
-                <a href="/core-folio/sobre-mi/">Sobre mí</a>
-
-                <ul class="submenu">
-                    <li><a href="/core-folio/sobre-mi/mi-historia/">Mi historia</a></li>
-                    <li><a href="/core-folio/sobre-mi/experiencia/">Experiencia</a></li>
-                    <li><a href="/core-folio/sobre-mi/habilidades/">Habilidades</a></li>
-                </ul>
-            </li>
-
-            <!-- SERVICIOS -->
-            <li class="navbar-item has-submenu">
-                <a href="/core-folio/servicios/">Servicios</a>
-
-                <ul class="submenu">
-                    <li><a href="/core-folio/servicios/proyectos/">Proyectos</a></li>
-                    <li><a href="/core-folio/servicios/socios/">Socios</a></li>
-                </ul>
-            </li>
-
-            <!-- BASS -->
-            <li class="navbar-item has-submenu">
-                <a href="/core-folio/bass/">Bass</a>
-
-                <ul class="submenu">
-                    <li><a href="/core-folio/bass/blog/">Blog</a></li>
-                </ul>
-            </li>
-
-        </ul>
-
-        <!-- CTA CONTACTO -->
-        <a href="/core-folio/contacto/" class="navbar-cta">Contacto</a>
-
     </div>
-</nav>
+
+    <!-- Contenido navegable -->
+    <div class="navbar-inner">
+        <!-- Logo horizontal (aparece con scroll) -->
+        <div class="navbar-logo-scroll">
+            <a href="/core-folio/">
+                <img
+                    src="/core-folio/assets/img/umbra-logo-horizontal-white.png"
+                    alt="Umbra Core Logo Horizontal"
+                >
+            </a>
+        </div>
+
+        <!-- Navegación -->
+        <nav class="navbar-nav">
+            <a href="/core-folio/">Home</a>
+            <a href="/core-folio/sobre-mi/">Sobre mí</a>
+            <a href="/core-folio/servicios/">Servicios</a>
+            <a href="/core-folio/bass/">Bass</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="navbar-cta">
+            <a href="/core-folio/contacto/" class="btn btn-primary">
+                Contacto
+            </a>
+        </div>
+    </div>
+</header>
