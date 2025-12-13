@@ -22,19 +22,16 @@
 
 <body>
 
-    <!-- NAVBAR (componente reutilizable) -->
-    <div data-include="/core-folio/components/navbar.html"></div>
+    <!-- NAVBAR -->
+    <div data-include="core-folio/components/navbar.html"></div>
 
-    <!-- HERO HOME -->
+    <!-- HERO -->
     <section class="hero hero-home">
-
-        <!-- Background visual -->
         <div
             class="hero-bg"
             style="background-image: url('/core-folio/assets/img/hero-bg-home.jpg');"
         ></div>
 
-        <!-- Contenido principal -->
         <div class="hero-content">
             <h1 class="hero-title">Raymond Quintana</h1>
 
@@ -43,47 +40,24 @@
             </p>
 
             <div class="hero-cta-group">
-                <a
-                    href="/core-folio/assets/doc/raymond-quintana-resumen.docx"
-                    class="btn btn-primary"
-                    download
-                >
+                <a class="btn btn-primary" download>
                     Descargar CV
                 </a>
-
-                <a
-                    href="/core-folio/servicios/proyectos/"
-                    class="btn btn-secondary"
-                >
+                <a class="btn btn-secondary">
                     Ver Proyectos
                 </a>
             </div>
         </div>
-
-        <!-- Logo contextual grande (ES parte del navbar, pero se muestra en hero) -->
-        <div class="hero-logo-contextual">
-            <a href="/core-folio/" aria-label="Volver al inicio">
-                <img
-                    src="/core-folio/assets/img/umbra-logo-white.png"
-                    alt="Umbra Logo"
-                >
-            </a>
-        </div>
-
     </section>
 
-    <!-- ESPACIO TEMPORAL (solo para probar scroll y cambio de navbar) -->
-    <div style="height: 120vh;"></div>
+    <!-- FOOTER -->
+    <div data-include="core-folio/components/footer.html"></div>
 
-    <!-- FOOTER (componente reutilizable) -->
-    <div data-include="/core-folio/components/footer.html"></div>
-
-    <!-- Loader de componentes HTML -->
     <script src="/core-folio/assets/js/data-loader.js"></script>
-
-    <!-- JS de comportamiento (navbar, submenus, scroll) -->
     <script src="/core-folio/assets/js/components.js"></script>
 
 </body>
+
 </html>
+
 
