@@ -1,57 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Umbra — Raymond Quintana</title>
+    <meta name="description" content="Umbra — Concepto, contraste y creación digital. Portfolio profesional de Raymond Quintana.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/core-folio/assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- CSS base -->
+    <link rel="stylesheet" href="/core-folio/assets/css/global.css">
+    <link rel="stylesheet" href="/core-folio/assets/css/typography.css">
+    <link rel="stylesheet" href="/core-folio/assets/css/layout.css">
+    <link rel="stylesheet" href="/core-folio/assets/css/components.css">
+    <link rel="stylesheet" href="/core-folio/assets/css/forms.css">
+    <link rel="stylesheet" href="/core-folio/assets/css/responsive.css">
+</head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <div data-include="components/navbar.html"></div>
+    <!-- NAVBAR (componente reutilizable) -->
+    <div data-include="/core-folio/components/navbar.html"></div>
 
-   <!-- HERO HOME -->
-<section class="hero hero-home">
-    <!-- Capa visual de fondo -->
-    <div class="hero-bg"></div>
+    <!-- HERO HOME -->
+    <section class="hero hero-home">
 
-    <!-- Contenido principal -->
-    <div class="hero-content">
-        <h1 class="hero-title">Raymond Quintana</h1>
+        <!-- Background visual -->
+        <div
+            class="hero-bg"
+            style="background-image: url('/core-folio/assets/img/hero-bg-home.jpg');"
+        ></div>
 
-        <p class="hero-description">
-            Concepto, contraste y creación digital.
-        </p>
+        <!-- Contenido principal -->
+        <div class="hero-content">
+            <h1 class="hero-title">Raymond Quintana</h1>
 
-        <div class="hero-cta-group">
-            <a
-                href="/core-folio/assets/doc/raymond-quintana-resumen.docx"
-                class="btn btn-primary"
-                download
-            >
-                Descargar CV
-            </a>
+            <p class="hero-description">
+                Concepto, contraste y creación digital.
+            </p>
 
-            <a
-                href="/core-folio/servicios/proyectos/"
-                class="btn btn-secondary"
-            >
-                Ver Proyectos
+            <div class="hero-cta-group">
+                <a
+                    href="/core-folio/assets/doc/raymond-quintana-resumen.docx"
+                    class="btn btn-primary"
+                    download
+                >
+                    Descargar CV
+                </a>
+
+                <a
+                    href="/core-folio/servicios/proyectos/"
+                    class="btn btn-secondary"
+                >
+                    Ver Proyectos
+                </a>
+            </div>
+        </div>
+
+        <!-- Logo contextual grande (ES parte del navbar, pero se muestra en hero) -->
+        <div class="hero-logo-contextual">
+            <a href="/core-folio/" aria-label="Volver al inicio">
+                <img
+                    src="/core-folio/assets/img/umbra-logo-white.png"
+                    alt="Umbra Logo"
+                >
             </a>
         </div>
-    </div>
 
-    <!-- Logo contextual grande (parte del navbar, pero decorativo en hero) -->
-    <div class="hero-logo-contextual">
-        <a href="/core-folio/">
-            <img
-                src="/core-folio/assets/img/umbra-logo-white.png"
-                alt="Umbra Logo"
-            >
-        </a>
-    </div>
-</section>
+    </section>
 
-<!-- Spacer temporal para probar scroll del navbar -->
-<div style="height: 120vh;"></div>
+    <!-- ESPACIO TEMPORAL (solo para probar scroll y cambio de navbar) -->
+    <div style="height: 120vh;"></div>
 
+    <!-- FOOTER (componente reutilizable) -->
+    <div data-include="/core-folio/components/footer.html"></div>
 
-    <!-- FOOTER -->
-    <div data-include="components/footer.html"></div>
+    <!-- Loader de componentes HTML -->
+    <script src="/core-folio/assets/js/data-loader.js"></script>
 
-    <script src="/assets/js/data-loader.js"></script>
+    <!-- JS de comportamiento (navbar, submenus, scroll) -->
+    <script src="/core-folio/assets/js/components.js"></script>
+
 </body>
-
+</html>
