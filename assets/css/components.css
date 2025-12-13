@@ -28,22 +28,8 @@
    LOGO PRINCIPAL INAMOVIBLE
 ------------------------------------------------------ */
 .navbar-logo-main img {
-    height: 60px;
+    height: 90px;
     width: auto;
-}
-
-/* ------------------------------------------------------
-   LOGO DE NAVEGACIÓN (SCROLL)
------------------------------------------------------- */
-.navbar-logo-scroll {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-}
-
-.navbar.navbar-scrolled .navbar-logo-scroll {
-    opacity: 1;
-    pointer-events: auto;
 }
 
 /* ------------------------------------------------------
@@ -138,6 +124,39 @@
     background: rgba(28, 29, 34, 0.85);  /* #1C1D22 con opacidad */
     backdrop-filter: blur(8px);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* ======================================================
+   LOGOS NAVBAR — NUEVO PLANTEAMIENTO
+====================================================== */
+
+/* Logo principal (visual en hero, lógico en navbar) */
+.navbar-logo-main {
+    position: absolute;
+    top: 140px;          /* AJUSTA si quieres bajarlo/subirlo */
+    left: 64px;
+    z-index: 998;
+}
+
+.navbar-logo-main img {
+    width: 260px;        /* OCUPA TODO EL CUADRO VERDE */
+    height: auto;
+}
+
+/* Logo horizontal (solo visible con scroll) */
+.navbar-logo-horizontal {
+    display: none;
+    align-items: center;
+}
+
+.navbar-logo-horizontal img {
+    height: 36px;
+    width: auto;
+}
+
+/* Estado scroll */
+.navbar.navbar-scrolled .navbar-logo-horizontal {
+    display: flex;
 }
 
 /* -------------------------
@@ -275,4 +294,5 @@
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 
