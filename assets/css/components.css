@@ -29,9 +29,9 @@
 ------------------------------------------------------ */
 .navbar-logo-main {
     position: absolute;
-    top: 140px;
-    left: 64px;
-    width: 260px;
+    top: 140px;        /* ajustable según el hero */
+    left: 64px;        /* alineado al grid */
+    width: 260px;      /* 👈 tamaño REAL del logo */
     z-index: 998;
 }
 
@@ -40,6 +40,7 @@
     height: auto;
     max-width: none;
 }
+
 /* ------------------------------------------------------
    MENU PRINCIPAL
 ------------------------------------------------------ */
@@ -302,6 +303,7 @@
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 
 
 
