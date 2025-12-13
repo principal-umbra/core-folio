@@ -1,37 +1,41 @@
-<header class="navbar" id="main-navbar">
-    <!-- Logo principal inamovible -->
-    <div class="navbar-logo-main">
-        <a href="/core-folio/">
-            <img
-                src="/core-folio/assets/img/umbra-logo-white.png"
-                alt="Umbra Core Logo"
-            >
-        </a>
+<header
+  class="navbar"
+  data-logo-default="/core-folio/assets/img/umbra-logo-horizontal-white.png"
+  data-logo-scrolled="/core-folio/assets/img/umbra-logo-horizontal-white.png"
+>
+
+  <div class="navbar-container">
+
+    <!-- LOGO PRINCIPAL INAMOVIBLE -->
+    <div class="navbar-logo navbar-logo-main">
+      <a href="/core-folio/">
+        <img
+          src="/core-folio/assets/img/umbra-logo-white.png"
+          alt="Umbra Logo Principal"
+        >
+      </a>
     </div>
 
-    <!-- Contenido navegable -->
-    <div class="navbar-inner">
-        <!-- Logo horizontal (aparece con scroll) -->
-        <div class="navbar-logo-scroll">
-            <a href="/core-folio/">
-                <img
-                    src="/core-folio/assets/img/umbra-logo-horizontal-white.png"
-                    alt="Umbra Core Logo Horizontal"
-                >
-            </a>
-        </div>
-
-        <nav class="navbar-nav">
-            <a href="/core-folio/">Home</a>
-            <a href="/core-folio/sobre-mi/">Sobre mí</a>
-            <a href="/core-folio/servicios/">Servicios</a>
-            <a href="/core-folio/bass/">Bass</a>
-        </nav>
-
-        <div class="navbar-cta">
-            <a href="/core-folio/contacto/" class="btn btn-primary">
-                Contacto
-            </a>
-        </div>
+    <!-- LOGO DE NAVEGACIÓN (CONTROLADO POR SCROLL) -->
+    <div class="navbar-logo navbar-logo-scroll">
+      <a href="/core-folio/">
+        <img
+          id="navbar-logo-img"
+          src="/core-folio/assets/img/umbra-logo-horizontal-white.png"
+          alt="Umbra Logo Navegación"
+        >
+      </a>
     </div>
+
+    <!-- MENU -->
+    <ul class="navbar-menu">
+      <li><a href="/core-folio/">Home</a></li>
+      <li><a href="/core-folio/sobre-mi/">Sobre mí</a></li>
+      <li><a href="/core-folio/servicios/">Servicios</a></li>
+      <li><a href="/core-folio/bass/">Bass</a></li>
+    </ul>
+
+    <a href="/core-folio/contacto/" class="navbar-cta">Contacto</a>
+
+  </div>
 </header>
