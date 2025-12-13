@@ -1,38 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const navbar = document.querySelector(".navbar");
-    const logoImg = document.getElementById("navbar-logo-img");
-        if (!logoImg) return;
-
-
-    const logoDefault = navbar.getAttribute("data-logo-default");
-    const logoScrolled = navbar.getAttribute("data-logo-scrolled");
-
-    // Detectar hero height dinámicamente
     const hero = document.querySelector(".hero");
+
     let scrollTriggerPoint = 0;
 
     const calculateTriggerPoint = () => {
         if (hero) {
-            scrollTriggerPoint = hero.offsetHeight * 0.5;
+            scrollTriggerPoint = hero.offsetHeight * 0.15;
         }
     };
 
     calculateTriggerPoint();
     window.addEventListener("resize", calculateTriggerPoint);
 
-    // Scroll behavior
     window.addEventListener("scroll", () => {
         if (window.scrollY > scrollTriggerPoint) {
             navbar.classList.add("navbar-scrolled");
-            logoImg.src = logoScrolled;
         } else {
             navbar.classList.remove("navbar-scrolled");
-            logoImg.src = logoDefault;
         }
     });
 
-    // Submenús con fade
+    // Submenús con fade (esto ya lo tenías bien)
     const submenuItems = document.querySelectorAll(".navbar-item.has-submenu");
 
     submenuItems.forEach(item => {
@@ -46,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             submenu.classList.remove("submenu-visible");
         });
     });
+
 });
 
 // --- footer: año dinámico (works even if footer is loaded later) ---
@@ -67,4 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
     obs.observe(document.documentElement || document.body, { childList: true, subtree: true });
   }
 })();
+
 
