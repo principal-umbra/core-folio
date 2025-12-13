@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const navbar = document.querySelector(".navbar");
     const logoImg = document.getElementById("navbar-logo-img");
+        if (!logoImg) return;
+
 
     const logoDefault = navbar.getAttribute("data-logo-default");
     const logoScrolled = navbar.getAttribute("data-logo-scrolled");
@@ -65,3 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
     obs.observe(document.documentElement || document.body, { childList: true, subtree: true });
   }
 })();
+
