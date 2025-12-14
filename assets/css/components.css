@@ -96,13 +96,13 @@
    CTA — CONTACTO
 ------------------------------------------------------ */
 .navbar-cta {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: #FF0000;
     color: #FFFFFF;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-family: "Moyko", sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     transition: background 0.25s ease;
 }
 
@@ -276,6 +276,7 @@
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 
 
 
