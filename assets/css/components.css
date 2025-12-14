@@ -25,23 +25,6 @@
 }
 
 /* ------------------------------------------------------
-   LOGO PRINCIPAL INAMOVIBLE
------------------------------------------------------- */
-.navbar-logo-main {
-    position: absolute;
-    top: 140px;        /* ajustable según el hero */
-    left: 64px;        /* alineado al grid */
-    width: 260px;      /* 👈 tamaño REAL del logo */
-    z-index: 998;
-}
-
-.navbar-logo-main img {
-    width: 100%;
-    height: auto;
-    max-width: none;
-}
-
-/* ------------------------------------------------------
    MENU PRINCIPAL
 ------------------------------------------------------ */
 .navbar-menu {
@@ -133,23 +116,6 @@
     background: rgba(28, 29, 34, 0.85);  /* #1C1D22 con opacidad */
     backdrop-filter: blur(8px);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
-}
-
-/* ======================================================
-   LOGOS NAVBAR — NUEVO PLANTEAMIENTO
-====================================================== */
-
-/* Logo principal (visual en hero, lógico en navbar) */
-.navbar-logo-main {
-    position: absolute;
-    top: 140px;          /* AJUSTA si quieres bajarlo/subirlo */
-    left: 64px;
-    z-index: 998;
-}
-
-.navbar-logo-main img {
-    width: 260px;        /* OCUPA TODO EL CUADRO VERDE */
-    height: auto;
 }
 
 /* ------------------------------------------------------
@@ -309,6 +275,7 @@
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 
 
 
