@@ -31,7 +31,7 @@
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 42px;
+    gap: 35px;
 }
 
 .navbar-menu li a {
@@ -276,6 +276,7 @@
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 
 
 
