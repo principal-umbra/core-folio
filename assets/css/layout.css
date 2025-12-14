@@ -77,12 +77,13 @@
 }
 
 /* ======================================================
-   HOME — SECCIÓN QUE SE SUPERPONE AL HERO
+   HOME — SECCIÓN QUE TAPA EL HERO (SCROLL)
 ====================================================== */
 
 .home-intro {
     position: relative;
     z-index: 5;
+    margin-top: 0;
 }
 
 .home-intro-inner {
@@ -90,7 +91,13 @@
     border-radius: 24px 24px 0 0;
     padding: 96px 64px;
     min-height: 120vh;
+
+    /* 🔴 CLAVE DEL EFECTO */
+    transform: translateY(100vh);
+    will-change: transform;
 }
+
+
 
 
 
