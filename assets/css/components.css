@@ -113,10 +113,10 @@
    NAVBAR SCROLLED STATE
 ------------------------------------------------------ */
 .navbar.navbar-scrolled {
-    background: rgba(28, 29, 34, 0.85);  /* #1C1D22 con opacidad */
-    backdrop-filter: blur(8px);
-    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    background: rgba(28, 29, 34, 0.9); /* más sólido */
+    backdrop-filter: blur(10px);
 }
+
 
 /* ------------------------------------------------------
    LOGO HORIZONTAL (VISIBLE SOLO CON SCROLL)
@@ -275,6 +275,7 @@
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 
 
 
