@@ -22,6 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
                 navbar.classList.remove("navbar-scrolled");
             }
         });
+/* ======================================================
+   HOME — HERO COVER SCROLL EFFECT
+====================================================== */
+
+const homeIntroInner = document.querySelector(".home-intro-inner");
+const hero = document.querySelector(".hero-home");
+
+if (homeIntroInner && hero) {
+    const heroHeight = hero.offsetHeight;
+
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+
+        // Progreso del scroll limitado al alto del hero
+        const progress = Math.min(scrollY / heroHeight, 1);
+
+        // De 100vh → 0vh
+        const translateY = (1 - progress) * heroHeight;
+
+        homeIntroInner.style.transform = `translateY(${translateY}px)`;
+    });
+}
 
         // Submenús
         const submenuItems = navbar.querySelectorAll(".navbar-item.has-submenu");
@@ -76,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     obs.observe(document.documentElement || document.body, { childList: true, subtree: true });
   }
 })();
+
 
 
 
