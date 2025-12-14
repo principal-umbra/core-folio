@@ -17,7 +17,7 @@
     inset: 0;
     background-size: cover;
     background-position: center;
-    z-index: 1;
+    z-index: 0;
 }
 
 /* Contenido */
@@ -38,7 +38,7 @@
     top: 120px;      /* ajusta fino */
     left: 64px;      /* ajusta fino */
     width: 320px;    /* ocupa el cuadro verde completo */
-    z-index: 1;
+    z-index: 3;
 }
 
 .hero-logo-contextual img {
@@ -75,4 +75,5 @@
     justify-content: center;   /* 🔴 CLAVE */
     flex-wrap: wrap;
 }
+
 
