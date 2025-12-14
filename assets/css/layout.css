@@ -82,7 +82,7 @@
 
 .home-intro {
     position: relative;
-    margin-top: -140px;
+    margin-top: -30vh; /* CLAVE: empieza sobre el hero */
     z-index: 5;
 }
 
@@ -90,6 +90,8 @@
     background: #1C1D22;
     border-radius: 24px 24px 0 0;
     padding: 96px 64px;
+    min-height: 120vh;
 }
+
 
 
