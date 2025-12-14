@@ -29,6 +29,23 @@
     padding: 0 24px;
 }
 
+.hero {
+    position: relative;
+}
+
+.hero-logo-contextual {
+    position: absolute;
+    top: 120px;      /* ajusta fino */
+    left: 64px;      /* ajusta fino */
+    width: 320px;    /* ocupa el cuadro verde completo */
+    z-index: 1;
+}
+
+.hero-logo-contextual img {
+    width: 100%;
+    height: auto;
+}
+
 /* ======================================================
    TEXTO
 ====================================================== */
@@ -58,3 +75,4 @@
     justify-content: center;   /* 🔴 CLAVE */
     flex-wrap: wrap;
 }
+
