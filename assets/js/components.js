@@ -22,29 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 navbar.classList.remove("navbar-scrolled");
             }
         });
-/* ======================================================
-   HOME — HERO COVER SCROLL EFFECT
-====================================================== */
-
-const homeIntroInner = document.querySelector(".home-intro-inner");
-const heroHome = document.querySelector(".hero-home");
-
-if (homeIntroInner && heroHome) {
-    const heroHeight = window.innerHeight;
-
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-
-        // progreso 0 → 1 durante el alto del hero
-        const progress = Math.min(scrollY / heroHeight, 1);
-
-        // empieza debajo y sube
-        const translateY = heroHeight * (1 - progress);
-
-        homeIntroInner.style.transform = `translateY(${translateY}px)`;
-    });
-}
-
 
         // Submenús
         const submenuItems = navbar.querySelectorAll(".navbar-item.has-submenu");
@@ -99,6 +76,7 @@ if (homeIntroInner && heroHome) {
     obs.observe(document.documentElement || document.body, { childList: true, subtree: true });
   }
 })();
+
 
 
 
