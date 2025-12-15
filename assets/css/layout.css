@@ -2,7 +2,7 @@
    HERO HOME — LAYOUT PRINCIPAL
 ====================================================== */
 
-.hero--home {
+.hero-home {
     position: fixed;
     top: 0;
     left: 0;
@@ -95,4 +95,5 @@
     padding: 96px 64px;
     min-height: 120vh;
 }
+
 
