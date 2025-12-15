@@ -84,6 +84,7 @@
 .home-intro {
     position: relative;
     z-index: 5;
+    margin-top: -20vh;
 }
 
 .home-intro-inner {
@@ -93,19 +94,17 @@
     min-height: 120vh;
 }
 
-/* ======================================================
-   HERO — ESPACIADOR PARA SCROLL
-====================================================== */
 
-.hero-spacer {
-    height: 100vh;
-}
+/* ======================================================
+   HERO — Scene
+====================================================== */
 
 .hero-scene {
     position: relative;
     height: 100vh;
     z-index: 1;
 }
+
 
 
 
