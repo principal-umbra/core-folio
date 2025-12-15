@@ -27,23 +27,24 @@ document.addEventListener("DOMContentLoaded", () => {
 ====================================================== */
 
 const homeIntroInner = document.querySelector(".home-intro-inner");
-const hero = document.querySelector(".hero-home");
+const heroHome = document.querySelector(".hero-home");
 
-if (homeIntroInner && hero) {
-    const heroHeight = hero.offsetHeight;
+if (homeIntroInner && heroHome) {
+    const heroHeight = window.innerHeight;
 
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
 
-        // Progreso del scroll limitado al alto del hero
+        // progreso 0 → 1 durante el alto del hero
         const progress = Math.min(scrollY / heroHeight, 1);
 
-        // De 100vh → 0vh
-        const translateY = (1 - progress) * heroHeight;
+        // empieza debajo y sube
+        const translateY = heroHeight * (1 - progress);
 
         homeIntroInner.style.transform = `translateY(${translateY}px)`;
     });
 }
+
 
         // Submenús
         const submenuItems = navbar.querySelectorAll(".navbar-item.has-submenu");
@@ -98,6 +99,7 @@ if (homeIntroInner && hero) {
     obs.observe(document.documentElement || document.body, { childList: true, subtree: true });
   }
 })();
+
 
 
 
