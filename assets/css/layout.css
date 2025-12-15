@@ -83,7 +83,10 @@
 .home-intro {
     position: relative;
     z-index: 5;
-    margin-top: 0;
+
+    /* Esto hace que arranque debajo del hero */
+    margin-top: -30vh;
+    padding-top: 30vh;
 }
 
 .home-intro-inner {
@@ -91,5 +94,4 @@
     border-radius: 24px 24px 0 0;
     padding: 96px 64px;
     min-height: 120vh;
-
 }
