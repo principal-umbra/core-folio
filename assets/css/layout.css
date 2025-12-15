@@ -1,17 +1,16 @@
 /* ======================================================
    HERO HOME — LAYOUT PRINCIPAL
 ====================================================== */
-
 .hero--home {
-    position: fixed;
-    inset: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
     z-index: 1;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 /* Fondo */
 .hero-bg {
@@ -107,6 +106,7 @@
     height: 100vh;
     z-index: 1;
 }
+
 
 
 
