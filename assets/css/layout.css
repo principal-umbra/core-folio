@@ -92,14 +92,4 @@
     padding: 96px 64px;
     min-height: 120vh;
 
-    /* 🔴 CLAVE DEL EFECTO */
-    transform: translateY(100vh);
-    will-change: transform;
 }
-
-
-
-
-
-
-
